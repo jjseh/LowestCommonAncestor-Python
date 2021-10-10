@@ -1,4 +1,24 @@
-# A binary tree node
+
+# Lowest Common Ancestor
+#
+#
+#           Binary Tree
+#
+#                 4
+# 				  |
+# 		  +-------+-------+
+# 		  |				  |
+# 		 10               7
+# 		  |	              |
+# 	  +---+---+       +---+---+
+# 	  |       |       |       |
+# 	  2       3       5       1
+#   +-+-+   +-+-+   +-+-+   +-+-+
+#   |   |   |   |   |   |   |   |
+#   8   9   6   14  12  15  11  16
+#
+
+#A binary tree node
 class Nodes:
     # Constructor to create a new binary node
     def __init__(self, key):
