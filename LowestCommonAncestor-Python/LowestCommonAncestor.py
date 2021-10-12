@@ -50,15 +50,23 @@ def findLowestCommonAncestor(root, node1, node2):
     if root is None:
         return None
 
+    # Check if root key matches with the nodes (Node1 ot Node2)
+    # If root matches then return the root
     if root.key == node1 or root.key == node2:
         return root
 
+    # Check for keys in tree
+    # Check left and right subtree
     leftSubtreeLca = findLowestCommonAncestor(root.left, node1, node2)
     rightSubtreeLca = findLowestCommonAncestor(root.right, node1, node2)
 
+    # If above returns values then each of the keys
+    # are in each of the subtree
+    # Therefore the LCA is found
     if leftSubtreeLca and rightSubtreeLca:
         return root
 
+    # Otherwise check if LCA is in the right ot left subtree
     return leftSubtreeLca if leftSubtreeLca is not None else rightSubtreeLca
 
 
